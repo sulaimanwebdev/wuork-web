@@ -3,7 +3,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 export default function Hero() {
     return (
           <>
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="relative isolate overflow-hidden pb-[250px] lg:pb-[150px]">
+        <div className='max-w-[1500px] mx-auto lg:flex lg:gap-x-20 px-6 pt-[116px] lg:px-8'>
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -16,35 +17,36 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{' '}
-              <a href="#" className="font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Data to enrich your online business
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+          
+          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+            <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
+              Boost your productivity.
+              <br />
+              Start using our app today.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-500">
+              Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a
                 href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-green-400 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-green-500 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+              <a href="#" className="text-sm font-semibold leading-6 text-white">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
+          </div>
+          <div className="relative mt-16 h-80 lg:mt-8">
+            <img
+              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+              alt="App screenshot"
+              width={1824}
+              height={1080}
+            />
           </div>
         </div>
         <div
@@ -59,7 +61,8 @@ export default function Hero() {
             }}
           />
         </div>
-      </div>
+
+        </div>
           </>
     )
   }
