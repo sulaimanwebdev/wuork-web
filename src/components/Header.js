@@ -5,7 +5,7 @@ import DropDown from './DropDown'
 
 const Header = (props) => {
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
@@ -32,7 +32,7 @@ const Header = (props) => {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            <DropDown/>
+            <DropDown solutions={props.solutions}/>
             {props.navigation.map((item) => (
               <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
                 {item.name}
@@ -69,7 +69,7 @@ const Header = (props) => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  <DropDown/>
+                  <DropDown solutions={props.solutions}/>
                   {props.navigation.map((item) => (
                     <a
                       key={item.name}

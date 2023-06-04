@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <>
-<div className='bg-[#111827]'>
+<div className='bg-white'>
 <div className='max-w-[1500px] mx-auto px-6 lg:px-8 pt-10'>
 <footer className="">
     <div className="w-full py-6 lg:py-8">
@@ -12,7 +12,7 @@ const Footer = () => {
               <a href="#" className="flex items-center">
                   <img src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" className="h-8 mr-3" alt="Logo" />
               </a>
-              <div className='text-white opacity-50 mt-5'>Making the world a better place through constructing<br className='hidden lg:flex'/> elegant hierarchies.</div>
+              <div className='text-gray-600 mt-5 lg:max-w-[300px]'>{props.description}</div>
               <div className="flex mt-4 space-x-6">
               <a href="#" className="text-gray-500">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
@@ -37,85 +37,32 @@ const Footer = () => {
           </div>
           </div>
           <div className="grid grid-cols-2 gap-[50px] lg:gap-[100px] sm:grid-cols-4">
-              <div>
-                  <h2 className="mb-6 text-sm font-semibold uppercase text-white">Solutions</h2>
-                  <ul className="text-white opacity-50">
-                      <li className="mb-4">
-                          <a href="#" className="hover:underline">Marketing</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Analytics</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Commerce</a>
-                      </li>
-                      <li>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Insights</a>
-                      </li>
+              {
+                props.footerLinks.map((ele, index)=>{
+                    return(
+                        <div key={index}>
+                  <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900">{ele.title}</h2>
+                  <ul className="">
+                      {
+                        ele.links.map((ele2, index)=>{
+                            return(
+                            <li key={index} className="text-gray-600 text-[15px] font-medium mb-4">
+                              <a href={ele2.url} className="hover:underline">{ele2.name}</a>
+                            </li>
+                            )
+                        })
+                      }
+                     
                   </ul>
               </div>
-              <div>
-                  <h2 className="mb-6 text-sm font-semibold uppercase text-white">Support</h2>
-                  <ul className="text-white opacity-50">
-                      <li className="mb-4">
-                          <a href="#" className="hover:underline">Marketing</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Pricing</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Documentation</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Guides</a>
-                      </li>
-                      <li>
-                          <a href="https://tailwindcss.com/" className="hover:underline">API Status</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div>
-                  <h2 className="mb-6 text-sm font-semibold uppercase text-white">Company</h2>
-                  <ul className="text-white opacity-50">
-                      <li className="mb-4">
-                          <a href="#" className="hover:underline">About</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Blog</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Jobs</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="https://tailwindcss.com/" className="hover:underline">Press</a>
-                      </li>
-                      <li>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Partner</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div>
-                  <h2 className="mb-6 text-sm font-semibold uppercase text-white">Legal</h2>
-                  <ul className="text-white opacity-50">
-                      <li className="mb-4">
-                          <a href="#" className="hover:underline">Claim</a>
-                      </li>
-                      <li className="mb-4">
-                          <a href="#" className="hover:underline">Privacy</a>
-                      </li>
-                      <li>
-                          <a href="#" className="hover:underline">Terms</a>
-                      </li>
-                  </ul>
-              </div>
+                    )
+                })
+              }
           </div>
       </div>
       <hr className="my-6 border-[#29303D] sm:mx-auto lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" className="hover:underline">Tailwind CSS</a>. All Rights Reserved.
-          </span>
+          <span className="text-gray-600 text-sm sm:text-center">{props.footerText}</span>
       </div>
     </div>
 </footer>
