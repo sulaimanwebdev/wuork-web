@@ -1,6 +1,8 @@
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Hero from '../components/Hero';
+import CTA from '../components/CTA';
+import Footer from '../components/Footer';
 
 export default function Home() {
 
@@ -19,6 +21,8 @@ export default function Home() {
         <Hero/>
       </div>
     </div>
+    <CTA/>
+    <Footer/>
     </>
   )
 }
