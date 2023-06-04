@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -12,14 +13,14 @@ const Header = (props) => {
     <header className="relative z-50 max-w-[1500px] mx-auto">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -40,8 +41,8 @@ const Header = (props) => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
+            <a href={props.page === "login" ? "/login" : props.page === "registration" ? "/registration" : "/"} className="text-sm font-semibold leading-6 text-gray-900">
+            {props.page === "login" ? "Log in" : props.page === "registration" ? "Register" : "Logout"} <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </nav>
@@ -82,10 +83,10 @@ const Header = (props) => {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href={props.page === "login" ? "/login" : props.page === "registration" ? "/registration" : "/"}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    {props.page === "login" ? "Log in" : props.page === "registration" ? "Register" : "Logout"}
                   </a>
                 </div>
               </div>

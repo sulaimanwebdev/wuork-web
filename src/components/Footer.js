@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Footer = (props) => {
   return (
@@ -9,9 +9,9 @@ const Footer = (props) => {
     <div className="w-full py-6 lg:py-8">
         <div className="lg:flex lg:justify-between">
           <div className="mb-10 lg:mb-0">
-              <a href="#" className="flex items-center">
+              <Link href="#" className="flex items-center">
                   <img src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" className="h-8 mr-3" alt="Logo" />
-              </a>
+              </Link>
               <div className='text-gray-600 mt-5 lg:max-w-[300px]'>{props.description}</div>
               <div className="flex mt-4 space-x-6">
               <a href="#" className="text-gray-500">

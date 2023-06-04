@@ -10,7 +10,7 @@ export default function Home() {
   const navigation = [
     { name: 'Features', href: '#' },
     { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Dashboard', href: '/dashboard' },
   ];
 
   // dropdown
@@ -67,7 +67,7 @@ export default function Home() {
     ]
   },
 
- ]
+ ];
 
    
   return (
@@ -83,6 +83,7 @@ export default function Home() {
        <Header
         navigation={navigation} 
         solutions={solutions}
+        page="login"
        />
 
       <div>
