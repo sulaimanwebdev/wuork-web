@@ -6,7 +6,7 @@ const Footer = () => {
 <div className='bg-[#111827]'>
 <div className='max-w-[1500px] mx-auto px-6 lg:px-8 pt-10'>
 <footer className="">
-    <div className="w-full p-4 py-6 lg:py-8">
+    <div className="w-full py-6 lg:py-8">
         <div className="lg:flex lg:justify-between">
           <div className="mb-10 lg:mb-0">
               <a href="#" className="flex items-center">
