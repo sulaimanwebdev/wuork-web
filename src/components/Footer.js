@@ -41,8 +41,8 @@ const Footer = (props) => {
                 props.footerLinks.map((ele, index)=>{
                     return(
                         <div key={index}>
-                  <h2 className="mb-6 text-sm font-semibold uppercase text-gray-900">{ele.title}</h2>
-                  <ul className="">
+                  <h6 className="mb-6 text-sm font-semibold uppercase text-gray-900">{ele.title}</h6>
+                  <ul>
                       {
                         ele.links.map((ele2, index)=>{
                             return(

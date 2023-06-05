@@ -87,16 +87,7 @@ export default function Home() {
        />
 
       <div>
-        <Hero
-        announceBTNtext="Announcing our next round of funding."
-        announceBTNlink="#"
-        title="Boost your productivity today"
-        description="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
-        mainBTNtext="Get started"
-        mainBTNlink="#"
-        secondBTNtext="Learn more"
-        secondBTNlink="#"
-        />
+        <Hero/>
       </div>
     </div>
 
@@ -104,10 +95,6 @@ export default function Home() {
     <CTA
     title="Boost your productivity today."
     description="Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla."
-    mainBTNtext="Get started"
-    mainBTNlink="#"
-    secondBTNtext="Learn more"
-    secondBTNlink="#"
     />
 
     <Footer

@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from './Button'
+import SecondaryButton from './SecondaryButton'
 
 const CTA = (props) => {
   return (
@@ -27,15 +29,16 @@ const CTA = (props) => {
               {props.description}
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href={props.mainBTNlink}
-                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                {props.mainBTNtext}
-              </a>
-              <a href={props.secondBTNlink} className="text-sm font-semibold leading-6 text-white">
-                {props.secondBTNtext} <span aria-hidden="true">→</span>
-              </a>
+              <Button
+              link="#"
+              text="Get Started"
+              color="bg-white text-gray-900 hover:bg-gray-100 focus-visible:outline-white"
+              />
+             <SecondaryButton
+             link="#"
+             text="Learn more"
+             color="text-white"
+             />
             </div>
           </div>
        
