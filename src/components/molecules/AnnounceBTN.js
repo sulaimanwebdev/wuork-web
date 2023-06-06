@@ -1,5 +1,5 @@
 import React from 'react'
-import AnnounceText from './AnnounceText'
+import AnnounceText from '../atoms/AnnounceText'
 
 const AnnounceBTN = (props) => {
   return (

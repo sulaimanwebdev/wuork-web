@@ -1,8 +1,8 @@
-import AnnounceBTN from "./AnnounceBTN";
-import Button from "./Button";
-import H1 from "./H1";
-import HeroParagraph from "./HeroParagraph";
-import SecondaryButton from "./SecondaryButton";
+import AnnounceBTN from "../molecules/AnnounceBTN";
+import Button from "../atoms/Button";
+import H1 from "../atoms/H1";
+import HeroParagraph from "../atoms/HeroParagraph";
+import SecondaryButton from "../atoms/SecondaryButton";
 
 export default function Hero(props) {
 

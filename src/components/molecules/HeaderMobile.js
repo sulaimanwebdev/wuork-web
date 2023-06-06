@@ -1,6 +1,6 @@
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import HeaderLink from './HeaderLink';
+import HeaderLink from '../atoms/HeaderLink';
 import DropDown from './DropDown'
 
 const HeaderMobile = (props) => {

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { XMarkIcon } from '@heroicons/react/20/solid'
-import BannerTitle from './BannerTitle';
-import BannerDescription from './BannerDescription';
-import RegisterButton from './RegisterButton';
+import BannerTitle from '../atoms/BannerTitle';
+import BannerDescription from '../atoms/BannerDescription';
+import RegisterButton from '../atoms/RegisterButton';
 
 export default function Banner(props) {
   const [showBanner, setshowBanner] = useState(true);

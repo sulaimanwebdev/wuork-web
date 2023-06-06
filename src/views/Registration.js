@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Input from '../components/Input';
-import LoginButton from '../components/LoginButton';
+import Header from '../components/templates/Header';
+import Footer from '../components/templates/Footer';
+import Input from '../components/atoms/Input';
+import LoginButton from '../components/atoms/LoginButton';
 
 const Registration = () => {
 

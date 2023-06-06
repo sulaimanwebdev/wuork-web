@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/outline'
-import DropDown from './DropDown'
-import HeaderLink from './HeaderLink';
-import HeaderMobile from './HeaderMobile';
+import DropDown from '../molecules/DropDown'
+import HeaderLink from '../atoms/HeaderLink';
+import HeaderMobile from '../molecules/HeaderMobile';
 
 const Header = (props) => {
 

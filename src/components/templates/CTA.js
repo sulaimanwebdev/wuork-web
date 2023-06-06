@@ -1,8 +1,8 @@
 import React from 'react'
-import Button from './Button'
-import SecondaryButton from './SecondaryButton'
-import CTATitle from './CTATitle'
-import CTAParagraph from './CTAParagraph'
+import Button from '../atoms/Button'
+import SecondaryButton from '../atoms/SecondaryButton'
+import CTATitle from '../atoms/CTATitle'
+import CTAParagraph from '../atoms/CTAParagraph'
 
 const CTA = (props) => {
   return (

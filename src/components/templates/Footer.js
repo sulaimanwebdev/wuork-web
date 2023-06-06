@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import FooterTitle from './FooterTitle';
-import FooterLink from './FooterLink';
-import Social from './Social';
+import FooterTitle from '../atoms/FooterTitle';
+import FooterLink from '../atoms/FooterLink';
+import Social from '../atoms/Social';
 
 const Footer = (props) => {
   return (
