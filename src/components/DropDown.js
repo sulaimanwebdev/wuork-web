@@ -2,7 +2,18 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
-export default function DropDown(props) {
+export default function DropDown() {
+
+    // dropdown
+    const solutions = [
+      { name: 'Analytics', href: '#'},
+      { name: 'Engagment', href: '#'},
+      { name: 'Security', href: '#'},
+      { name: 'Integrations', href: '#'},
+      { name: 'Automations', href: '#'},
+      { name: 'Reports', href: '#'},
+    ];
+
   return (
     <Popover className="relative outline-none">
       <Popover.Button className="inline-flex outline-none items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -23,7 +34,7 @@ export default function DropDown(props) {
           <div className="w-screen max-w-[200px] flex-auto overflow-hidden rounded-xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
             <div className="flex flex-col gap-4 px-5 py-3">
               {
-                props.solutions.map((ele)=> {
+                solutions.map((ele)=> {
                   return(
                     <a href={ele.href} className='font-[500]'>{ele.name}</a>
                   )

@@ -13,17 +13,6 @@ const Login = () => {
     { name: 'Dashboard', href: '/dashboard' },
   ];
 
-  // dropdown
-  const solutions = [
-    { name: 'Analytics', href: '#'},
-    { name: 'Engagment', href: '#'},
-    { name: 'Security', href: '#'},
-    { name: 'Integrations', href: '#'},
-    { name: 'Automations', href: '#'},
-    { name: 'Reports', href: '#'},
-  ];
-
-
   // footer
  let footerLinks = [
   {
@@ -74,7 +63,6 @@ const Login = () => {
     <>
     <Header 
     navigation={navigation} 
-    solutions={solutions}
     page="registration"
     />
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-8 md:py-20 lg:px-8">

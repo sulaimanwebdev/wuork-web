@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from './Button'
 import SecondaryButton from './SecondaryButton'
+import CTATitle from './CTATitle'
+import CTAParagraph from './CTAParagraph'
 
 const CTA = (props) => {
   return (
@@ -22,12 +24,12 @@ const CTA = (props) => {
             </defs>
           </svg>
           <div className="max-w-[500px] mx-auto text-center lg:mx-0 lg:flex-auto py-[90px]">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              {props.title}
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              {props.description}
-            </p>
+            <CTATitle
+            title={props.title}
+            />
+            <CTAParagraph
+            description={props.description}
+            />
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button
               link="#"

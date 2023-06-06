@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { XMarkIcon } from '@heroicons/react/20/solid'
+import BannerTitle from './BannerTitle';
+import BannerDescription from './BannerDescription';
+import RegisterButton from './RegisterButton';
 
 export default function Banner(props) {
   const [showBanner, setshowBanner] = useState(true);
@@ -33,18 +36,20 @@ export default function Banner(props) {
      
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         <p className="text-sm leading-6 text-gray-900">
-          <strong className="font-semibold">{props.title}</strong>
+          <BannerTitle
+          title={props.title}
+          />
           <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
             <circle cx={1} cy={1} r={1} />
           </svg>
-          {props.description}
+          <BannerDescription
+          description={props.description}
+          />
         </p>
-        <a
-          href={props.buttonLink}
-          className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
-        >
-          {props.buttonText} <span aria-hidden="true">&rarr;</span>
-        </a>
+        <RegisterButton
+        buttonText={props.buttonText}
+        buttonLink={props.buttonLink}
+        />
       </div>
       <div className="flex flex-1 justify-end">
         <button onClick={()=> {setshowBanner(false)}} type="button" className="-m-3 p-3 focus-visible:outline-offset-[-4px]">

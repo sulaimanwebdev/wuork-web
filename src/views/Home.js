@@ -13,17 +13,7 @@ export default function Home() {
     { name: 'Dashboard', href: '/dashboard' },
   ];
 
-  // dropdown
-  const solutions = [
-    { name: 'Analytics', href: '#'},
-    { name: 'Engagment', href: '#'},
-    { name: 'Security', href: '#'},
-    { name: 'Integrations', href: '#'},
-    { name: 'Automations', href: '#'},
-    { name: 'Reports', href: '#'},
-  ];
-
-
+  
   // footer
  let footerLinks = [
   {
@@ -82,7 +72,6 @@ export default function Home() {
 
        <Header
         navigation={navigation} 
-        solutions={solutions}
         page="login"
        />
 

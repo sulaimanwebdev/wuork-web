@@ -1,11 +1,11 @@
 import {useState} from 'react'
 import {
   Bars3Icon,
+  BellIcon
 } from '@heroicons/react/24/outline'
 import Sidebar from '../components/Sidebar';
 import Search from '../components/Search';
 import ProfileDropDown from '../components/ProfileDropDown';
-import Bell from '../components/Bell';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -37,7 +37,10 @@ const Dashboard = () => {
             <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
               <Search/>
               <div className="flex items-center gap-x-4 lg:gap-x-6">
-                <Bell/>
+              <button type="button" className="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
+      <span className="sr-only">View notifications</span>
+      <BellIcon className="h-6 w-6" aria-hidden="true" />
+    </button>
 
                 {/* Separator */}
                 <div className="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10" aria-hidden="true" />

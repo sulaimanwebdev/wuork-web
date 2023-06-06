@@ -1,5 +1,7 @@
 import AnnounceBTN from "./AnnounceBTN";
 import Button from "./Button";
+import H1 from "./H1";
+import HeroParagraph from "./HeroParagraph";
 import SecondaryButton from "./SecondaryButton";
 
 export default function Hero(props) {
@@ -25,12 +27,10 @@ export default function Hero(props) {
           announceBTNlink="#"
           />
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-             Boost your productivity today
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-            </p>
+            <H1 title="Boost your productivity today"/>
+            <HeroParagraph
+            title="Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+            />
             <div className="mt-10 flex items-center justify-center gap-x-6">
              <Button
              link="#"
