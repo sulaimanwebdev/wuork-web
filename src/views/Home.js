@@ -1,8 +1,8 @@
-import Header from '../components/templates/Header';
-import Banner from '../components/templates/Banner';
-import Hero from '../components/templates/Hero';
-import CTA from '../components/templates/CTA';
-import Footer from '../components/templates/Footer';
+import Header from '../templates/Header';
+import Banner from '../templates/Banner';
+import Hero from '../templates/Hero';
+import CTA from '../templates/CTA';
+import Footer from '../templates/Footer';
 
 export default function Home() {
 

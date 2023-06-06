@@ -3,9 +3,9 @@ import {
   Bars3Icon,
   BellIcon
 } from '@heroicons/react/24/outline'
-import Sidebar from '../components/molecules/Sidebar';
-import Search from '../components/atoms/Search';
-import ProfileDropDown from '../components/molecules/ProfileDropDown';
+import Sidebar from '../molecules/Sidebar';
+import Search from '../atoms/Search';
+import ProfileDropDown from '../molecules/ProfileDropDown';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
